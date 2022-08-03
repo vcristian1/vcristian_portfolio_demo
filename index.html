@@ -11,89 +11,63 @@
 <body>
 <!-- This example requires Tailwind CSS v2.0+ -->
     <div class="relative bg-white overflow-hidden">
-        
-        <div class="max-w-7xl mx-auto">
         <div class="relative z-10 pb-8 bg-white">
+
             <svg class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
             <polygon points="50,0 100,0 50,100 0,100" />
             </svg>
     
-            <div>
             <div class="relative pt-6 px-4 sm:px-6 lg:px-8">
                 <nav class="relative flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
-                <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
-                    <div class="flex items-center justify-between w-full md:w-auto">
-                        <div>
-                            <img class="h-10 w-15"src="/assets/cvlogo.png" alt="">
-                        </div>
-                        <div class="-mr-2 flex items-center md:hidden">
-                            <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
-                            <span class="sr-only">Open main menu</span>
-                            <!-- Heroicon name: outline/menu -->
-                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                            </svg>
-                            </button>
+                    <!--
+                        Mobile menu, show/hide based on menu open state.
+            
+                        Entering: "duration-150 ease-out"
+                        From: "opacity-0 scale-95"
+                        To: "opacity-100 scale-100"
+                        Leaving: "duration-100 ease-in"
+                        From: "opacity-100 scale-100"
+                        To: "opacity-0 scale-95"
+                    -->
+                    
+                    
+                    <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
+                        <div class="flex items-center justify-between w-full md:w-auto">
+                            <div>
+                                <img class="h-10 w-15"src="/assets/cvlogo.png" alt="">
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
-                    <a href="#" class="font-medium text-gray-500 hover:text-green-400 transition">About</a>
-    
-                    <a href="#" class="font-medium text-gray-500 hover:text-green-400 transition">Projects</a>
-    
-                    <a href="#" class="font-medium text-gray-500 hover:text-green-400 transition">Resume</a>
-    
-                    <a href="#" class="font-medium text-gray-500 hover:text-green-400 transition">Contact</a>
 
-                </div>
+                    <div id="mobile-menu" class="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
+                        <a href="#" class="font-medium text-gray-500 hover:text-green-400 transition">About</a>
+        
+                        <a href="#" class="font-medium text-gray-500 hover:text-green-400 transition">Projects</a>
+        
+                        <a href="#" class="font-medium text-gray-500 hover:text-green-400 transition">Resume</a>
+        
+                        <a href="#" class="font-medium text-gray-500 hover:text-green-400 transition">Contact</a>
+                    </div>
+
+                    <div id="mobile_burger" class="-mr-2 flex items-center md:hidden">
+                        <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-400" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Heroicon name: outline/menu -->
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        </button>
+                    </div>
                 </nav>
             </div>
     
-            <!--
-                Mobile menu, show/hide based on menu open state.
-    
-                Entering: "duration-150 ease-out"
-                From: "opacity-0 scale-95"
-                To: "opacity-100 scale-100"
-                Leaving: "duration-100 ease-in"
-                From: "opacity-100 scale-100"
-                To: "opacity-0 scale-95"
-            -->
-            <div class="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
-                <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
-                <div class="px-5 pt-4 flex items-center justify-between">
-                    <div>
-                        <img id="cv-logo" class="w-8 h-10" src="/assets/cvlogo.png" alt="">
-                    </div>
-                    <div class="-mr-2">
-                    <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-                        <span class="sr-only">Close main menu</span>
-                        <!-- Heroicon name: outline/x -->
-                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                    </div>
-                </div>
-                <div class="px-2 pt-2 pb-3 space-y-1">
-                    <a href="#" class="font-medium text-gray-500 hover:text-green-400 transition">About</a>
-    
-                    <a href="#" class="font-medium text-gray-500 hover:text-green-400 transition">Projects</a>
-    
-                    <a href="#" class="font-medium text-gray-500 hover:text-green-400 transition">Resume</a>
-    
-                    <a href="#" class="font-medium text-gray-500 hover:text-green-400 transition">Contact</a>
-                </div>
-            </div>
-            </div>
     
             <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
                 <!-- <img alt="Gift's headshot" src="assets/IMG_3397.jpg" width="300" data-src="/assets/IMG_3397.jpg" data-srcset="assets/IMG_3397.jpg" data-sizes="(max-width: 300px) 100vw, 300px" class="rounded-full bio g-image g-image--lazy g-image--loaded" srcset="assets/IMG_3397.jpg" sizes="(max-width: 300px) 100vw, 300px"> -->
 
-                <div class="mb-10 sm:text-center lg:text-left">
-                    <h1 class="text-4xl tracking-tight font-bold text-green-400 sm:text-5xl md:text-6xl">
-                        <span class="block xl:inline">Hello, Im Cristian</span>
+                <div class="sm:text-center lg:text-left">
+                    <h1 class="text-4xl tracking-tight font-thin sm:text-5xl md:text-6xl">Hello, Im 
+                        <span class="block text-green-400 xl:inline">Cristian</span>
                     </h1>
 
                     <h1 class="tracking-tight font-extrabold text-gray-900 sm:text-3xl md:text-3xl">
@@ -206,57 +180,6 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="w-full md:w-1/2 xl:w-1/3 px-4">
-                                <div class="bg-white rounded-lg overflow-hidden mb-10">
-                                    <img
-                                    src="/assets/screenshot.png"
-                                    alt="image"
-                                    class="w-full ml-4"
-                                    />
-                                    <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
-                                    <h3>
-                                        <a
-                                            href="https://drive.google.com/file/d/1eeJ1vqruyNjNho3A7iGV1cNJHj9NbOXI/view"
-                                            class="
-                                            font-semibold
-                                            text-dark text-xl
-                                            sm:text-[22px]
-                                            md:text-xl
-                                            lg:text-[22px]
-                                            xl:text-xl
-                                            2xl:text-[22px]
-                                            mb-4
-                                            block
-                                            hover:text-green-400
-                                            transition
-                                            "
-                                            >
-                                        Employee Tracker CLI
-                                        </a>
-                                    </h3>
-                                    <p class="text-base text-body-color leading-relaxed mb-7">
-                                        This is a Command Line Interface Application which manages a company's employee database, using Node.js, Inquirer, and MySQL.
-                                    </p>
-                                    <a
-                                        href="https://github.com/vcristian1/employee-tracker-demo"
-                                        class="
-                                        inline-block
-                                        py-2
-                                        px-7
-                                        border border-[#E5E7EB]
-                                        rounded-full
-                                        text-base text-body-color
-                                        font-medium
-                                        hover:border-primary hover:bg-primary hover:text-green-400
-                                        transition
-                                        "
-                                        >
-                                    View Repository
-                                    </a>
-                                    </div>
-                                </div>
-                            </div>
     
                             <div class="w-full md:w-1/2 xl:w-1/3 px-4">
                                 <div class="bg-white rounded-lg overflow-hidden mb-10">
@@ -308,6 +231,57 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="w-full md:w-1/2 xl:w-1/3 px-4">
+                                <div class="bg-white rounded-lg overflow-hidden mb-10">
+                                    <img
+                                    src="/assets/screenshot.png"
+                                    alt="image"
+                                    class="w-full ml-4"
+                                    />
+                                    <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
+                                    <h3>
+                                        <a
+                                            href="https://drive.google.com/file/d/1eeJ1vqruyNjNho3A7iGV1cNJHj9NbOXI/view"
+                                            class="
+                                            font-semibold
+                                            text-dark text-xl
+                                            sm:text-[22px]
+                                            md:text-xl
+                                            lg:text-[22px]
+                                            xl:text-xl
+                                            2xl:text-[22px]
+                                            mb-4
+                                            block
+                                            hover:text-green-400
+                                            transition
+                                            "
+                                            >
+                                        Employee Tracker CLI
+                                        </a>
+                                    </h3>
+                                    <p class="text-base text-body-color leading-relaxed mb-7">
+                                        This is a Command Line Interface Application which manages a company's employee database, using Node.js, Inquirer, and MySQL.
+                                    </p>
+                                    <a
+                                        href="https://github.com/vcristian1/employee-tracker-demo"
+                                        class="
+                                        inline-block
+                                        py-2
+                                        px-7
+                                        border border-[#E5E7EB]
+                                        rounded-full
+                                        text-base text-body-color
+                                        font-medium
+                                        hover:border-primary hover:bg-primary hover:text-green-400
+                                        transition
+                                        "
+                                        >
+                                    View Repository
+                                    </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -315,7 +289,7 @@
                 <div class="bg-white">
                     <div class="max-w-2xl mx-auto py-24 px-4 grid items-center grid-cols-1 gap-y-16 gap-x-8 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8 lg:grid-cols-2">
                       <div>
-                        <h2 class="text-3xl font-bold tracking-tight text-green-400 sm:text-4xl">Technical Skills</h2>
+                        <h2 class="text-3xl font-bold tracking-tight text-green-400 sm:text-4xl">Resume & Technical Skills</h2>
                         <p class="mt-4 text-gray-500">Full Stack Engineer leveraging background in management to provide unique perspectives on how users interact with websites, applications, and software platforms.</p>
                   
                         <dl class="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
@@ -341,7 +315,6 @@
                                 <dt class="font-medium text-gray-900">References</dt>
                                 <dd class="mt-2 text-sm text-gray-500">Ozzy Cardenas - Full Stack Engineer at Sprout Social</dd>
                                 <dd class="mt-2 text-sm text-gray-500">Craig Culbert - CEO at First Look Appraisals</dd>
-                                <dd class="mt-2 text-sm text-gray-500">Mike Honeycutt - CFO at First Look Appraisals</dd>
                                 <dd class="mt-2 text-sm text-gray-500">Ankit Patel - Vice President of Operations at First Look Appraisals</dd>
                             </div>
                     
@@ -375,7 +348,7 @@
                             <div class="w-full lg:w-1/2 xl:w-6/12 px-4">
                                 <div class="max-w-[570px] mb-12 lg:mb-0">
                                     <h2 class="text-3xl font-bold tracking-tight text-green-400 sm:text-4xl">Contact Me</h2>
-                                    <p class="mt-4 text-gray-500">Reach out via email or LinkedIn if you wish to connect.</p>     
+                                    <p class="mt-4 mb-4 text-gray-500">Reach out via email or LinkedIn if you wish to connect.</p>     
 
                                     <div class="flex mb-8 max-w-[370px] w-full">
                                         <div
