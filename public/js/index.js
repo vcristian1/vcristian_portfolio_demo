@@ -5,7 +5,7 @@ let dark = document.getElementById("dark");
 const burger = document.getElementById('mobile_burger');
 const menu = document.getElementById('mobile-menu');
 
-
+//Dark Mode logic
 const switchMode = (event) => {
     switch (event.target.value) {
         case "auto":
