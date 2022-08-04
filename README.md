@@ -8,9 +8,9 @@
 
 ## Overview
 
-![screenshot](/assets/readme.png)
-![screenshot](/assets/readme2.png)
-![screenshot](/assets/readme3.png)
+![screenshot](/assets/desktop-screenshot.png)
+![screenshot](/assets/ipad-screenshot.png)
+![screenshot](/assets/mobile-screenshot.png)
 
 This application demo allows users to view a portfolio containing brief sections about myself, my current projects, and how to contact me best. This demo is an opportunity for me to showcase my skills attained before entering the final phase of Northwestern University's Full Stack Cohort.
 
